@@ -80,6 +80,7 @@ namespace RapiddIdenity.Controllers.Auth
                     var confirmEmail = _userManager.ConfirmEmailAsync(user, token);
                     if (confirmEmail.IsCompletedSuccessfully)
                     {
+                        MailController mailController = new(_configuration);
 
                     }
                 }
